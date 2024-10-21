@@ -23,7 +23,7 @@ class MemberTest {
     }
 
     @Test
-    void membershipVaildUntilDateTest() {
+    void membershipValidUntilDateTest() {
         LocalDate validUntilDate = activeMember.membershipValidUntilDate();
         assertEquals(LocalDate.parse("2025-07-01"), validUntilDate);
         assertNotEquals(LocalDate.parse("2025-07-02"), validUntilDate);
