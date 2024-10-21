@@ -24,11 +24,11 @@ class MemberTest {
 
     @Test
     void membershipVaildUntilDateTest() {
-        LocalDate validUntilDate = activeMember.membershipVaildUntilDate();
+        LocalDate validUntilDate = activeMember.membershipValidUntilDate();
         assertEquals(LocalDate.parse("2025-07-01"), validUntilDate);
         assertNotEquals(LocalDate.parse("2025-07-02"), validUntilDate);
 
-        LocalDate validUntilDate2 = inactvieMember.membershipVaildUntilDate();
+        LocalDate validUntilDate2 = inactvieMember.membershipValidUntilDate();
         assertEquals(LocalDate.parse("2020-12-02"), validUntilDate2);
         assertNotEquals(LocalDate.parse("2024-12-02"), validUntilDate2);
     }
