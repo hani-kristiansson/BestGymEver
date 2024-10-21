@@ -16,14 +16,14 @@ public class Member {
 
     // membership active date from membership paid, return data form of true or false
     // if currentDate minus 1 year is before than membership paid date. # TRUE
-    // ex) Local date 2024-10-21 / current date minus 1 year 2023-10-21 / paid date 2024-07-01 #True
-    // ex) Local date 2024-10-21 / current date minus 1 year 2023-10-21 / paid date 2023-07-01 #False
+    // ex) Local date 2024-10-22 / current date minus 1 year 2023-10-22 / paid date 2024-07-01 #True / active
+    // ex) Local date 2024-10-22 / current date minus 1 year 2023-10-22 / paid date 2023-07-01 #False / inactive
     public boolean isMembershipActive(LocalDate currentDate){
         return currentDate.minusYears(1).isBefore(membershipPaidDate);
     }
 
     // to calculate membership valid date that will use both for the active/inactive membership
-    public LocalDate membershipVaildUntilDate (){
+    public LocalDate membershipValidUntilDate (){
         return membershipPaidDate.plusYears(1);
     }
 

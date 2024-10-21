@@ -46,12 +46,12 @@ public class Main {
             System.out.println(input + " does not exist in system.");
 
         } else if (member.isMembershipActive(LocalDate.now())) {
-            System.out.printf("%s has 'active' membership until %s.%n", member.getName(), member.membershipVaildUntilDate());
+            System.out.printf("%s has 'active' membership until %s.%n", member.getName(), member.membershipValidUntilDate());
 
             tl.writeAndAddMemberTrainingLog(member);
 
         } else {
-            System.out.printf("%s has 'inactive' membership since %s.%n", member.getName(), member.membershipVaildUntilDate());
+            System.out.printf("%s has 'inactive' membership since %s.%n", member.getName(), member.membershipValidUntilDate());
         }
     }
 }
